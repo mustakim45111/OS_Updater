@@ -14,12 +14,18 @@ It contains scripts for Linux and Windows to automate system updates, clean unne
 
 ## Commands
 
-Linux users:
+- `Linux users`:
 
-    chmod +x linux_updater.sh && ./linux_updater.sh
+Allow script to run in current session:
+
+    chmod +x linux_updater.sh
+
+Run the Linux updater script:
+    
+    ./linux_updater.sh
 
 
-Windows users:
+- `Windows users`:
 
 Allow script to run in current session:
 
