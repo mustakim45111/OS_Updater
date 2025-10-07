@@ -1,20 +1,14 @@
 #!/bin/bash
-# Advanced Linux One-Command Updater
-
 LOG_FILE="$HOME/linux-update-$(date +%F).log"
-
 echo "System update started..." | tee -a "$LOG_FILE"
 START_TIME=$(date +%s)
 
-# Update package list
 echo "Updating package list..." | tee -a "$LOG_FILE"
 sudo apt update 2>&1 | tee -a "$LOG_FILE"
 
-# Upgrade packages
 echo "Upgrading packages..." | tee -a "$LOG_FILE"
 sudo apt full-upgrade -y 2>&1 | tee -a "$LOG_FILE"
 
-# Remove unnecessary packages
 echo "Removing old packages..." | tee -a "$LOG_FILE"
 sudo apt autoremove -y 2>&1 | tee -a "$LOG_FILE"
 
